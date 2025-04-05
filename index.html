@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petros Data Consulting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <div class="container">
+    <nav>
+      <div class="logo">
+        <img src="/api/placeholder/50/50" alt="Petros Data Logo">
+        <div class="logo-text">PETROS DATA</div>
+      </div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Crystallizing Healthcare Data into Strategic Clarity</h1>
+        <p>Where complex healthcare data transforms from raw potential to actionable intelligence.</p>
+        <a href="#contact" class="cta-button">Schedule a Consultation</a>
+      </div>
+      <div class="hero-image-container">
+        <div class="crystal-bg"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>Our Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">⟁</div>
+          <h3>Data Strategy Formation</h3>
+          <p>Enterprise-wide data and AI strategy tailored specifically for healthcare organizations.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⧠</div>
+          <h3>Experimental Design</h3>
+          <p>End-to-end experimentation pipelines from ideation to measurement and value capture.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⟢</div>
+          <h3>Analytics & Insights</h3>
+          <p>Predictive modeling and advanced analytics that deliver actionable healthcare insights.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⥹</div>
+          <h3>LLM Integration</h3>
+          <p>Innovative LLM applications tailored for healthcare knowledge and information retrieval.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⟰</div>
+          <h3>Data Visualization</h3>
+          <p>Clear, compelling dashboards that transform complex healthcare data into intuitive insights.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">⧉</div>
+          <h3>Knowledge Graphs</h3>
+          <p>Connected information systems that reveal hidden relationships in healthcare data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Petros Data</h2>
+      </div>
+      <div class="about-content">
+        <div class="about-image"></div>
+        <div class="about-text">
+          <h3>Healthcare Data Specialists</h3>
+          <p>At Petros Data Consulting, we specialize in transforming complex healthcare data into strategic assets. With extensive experience in the health insurance industry, we excel at "0 to 1" innovation.</p>
+          <p>Our name reflects our mission - just as petrification transforms organic matter into crystalline structures, we transform chaotic data into clear, actionable intelligence.</p>
+          <p>We bridge deep healthcare knowledge with innovative data science approaches, helping enterprises navigate their data transformation journey from experimentation to value realization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+      </div>
+      <form id="contactForm" action="https://formsubmit.co/daniel@petrosdata.com" method="POST" class="contact-form">
+        <!-- Anti-spam honeypot field -->
+        <input type="text" name="_honey" style="display:none">
+        
+        <!-- Disable captcha -->
+        <input type="hidden" name="_captcha" value="false">
+        
+        <!-- Success page redirect - optional -->
+        <input type="hidden" name="_next" value="thanks.html">
+        
+        <div class="form-group">
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required>
+          <div class="field-error" id="nameError"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required>
+          <div class="field-error" id="emailError"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" required></textarea>
+          <div class="field-error" id="messageError"></div>
+        </div>
+        
+        <div id="formResponse" class="form-response"></div>
+        
+        <button type="submit" class="cta-button" id="submitButton">
+          Send Message
+          <span id="submitSpinner" class="form-loading" style="display: none;"></span>
+        </button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">PETROS DATA CONSULTING</div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Include JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
