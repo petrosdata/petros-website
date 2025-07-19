@@ -9,5 +9,5 @@ deployment:
     - /bin/cp particles.js $DEPLOYPATH
     - /bin/cp script.js $DEPLOYPATH
     - /bin/cp thanks.html $DEPLOYPATH
-    - /bin/cp assets $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
 
