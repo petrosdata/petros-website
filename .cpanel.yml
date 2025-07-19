@@ -1,0 +1,13 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/petrosda/petros-website/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp style.css $DEPLOYPATH
+    - /bin/cp animations.css $DEPLOYPATH
+    - /bin/cp animations.js $DEPLOYPATH
+    - /bin/cp particles.js $DEPLOYPATH
+    - /bin/cp script.js $DEPLOYPATH
+    - /bin/cp thanks.html $DEPLOYPATH
+    - /bin/cp assets $DEPLOYPATH
+
