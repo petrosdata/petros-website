@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Petros Data Consulting</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="assets/logo-styles.css">
 </head>
 <body>
   <!-- Navigation -->
   <div class="container">
     <nav>
       <div class="logo">
-        <img src="/api/placeholder/50/50" alt="Petros Data Logo">
+        <img src="assets/petros-logo.svg" alt="Petros Data Logo">
         <div class="logo-text">PETROS DATA</div>
       </div>
       <div class="nav-links">
@@ -23,9 +26,9 @@
   </div>
   
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero animate-on-scroll">
     <div class="container">
-      <div class="hero-content">
+      <div class="hero-content fade-in-left">
         <h1>Crystallizing Healthcare Data into Strategic Clarity</h1>
         <p>Where complex healthcare data transforms from raw potential to actionable intelligence.</p>
         <a href="#contact" class="cta-button">Schedule a Consultation</a>
@@ -37,7 +40,7 @@
   </section>
   
   <!-- Services Section -->
-  <section class="section" id="services">
+  <section class="section animate-on-scroll" id="services">
     <div class="container">
       <div class="section-header">
         <h2>Our Services</h2>
@@ -78,14 +81,14 @@
   </section>
   
   <!-- About Section -->
-  <section class="section" id="about">
+  <section class="section animate-on-scroll" id="about">
     <div class="container">
       <div class="section-header">
         <h2>About Petros Data</h2>
       </div>
       <div class="about-content">
-        <div class="about-image"></div>
-        <div class="about-text">
+        <div class="about-image crystal-shimmer"></div>
+        <div class="about-text fade-in-right">
           <h3>Healthcare Data Specialists</h3>
           <p>At Petros Data Consulting, we specialize in transforming complex healthcare data into strategic assets. With extensive experience in the health insurance industry, we excel at "0 to 1" innovation.</p>
           <p>Our name reflects our mission - just as petrification transforms organic matter into crystalline structures, we transform chaotic data into clear, actionable intelligence.</p>
@@ -96,12 +99,12 @@
   </section>
   
   <!-- Contact Section -->
-  <section class="section" id="contact">
+  <section class="section animate-on-scroll" id="contact">
     <div class="container">
       <div class="section-header">
         <h2>Get In Touch</h2>
       </div>
-      <form id="contactForm" action="https://formsubmit.co/daniel@petrosdata.com" method="POST" class="contact-form">
+      <form id="contactForm" action="https://formsubmit.co/daniel@petrosdata.com" method="POST" class="contact-form animate-on-scroll">
         <!-- Anti-spam honeypot field -->
         <input type="text" name="_honey" style="display:none">
         
@@ -160,5 +163,7 @@
 
   <!-- Include JavaScript -->
   <script src="script.js"></script>
+  <script src="particles.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

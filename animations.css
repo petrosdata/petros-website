@@ -1,0 +1,335 @@
+/* Animation timing variables */
+:root {
+  --transition-fast: 0.2s;
+  --transition-medium: 0.5s;
+  --transition-slow: 0.8s;
+  --ease-default: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Base animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-medium) var(--ease-default),
+              transform var(--transition-medium) var(--ease-default);
+}
+
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animations for children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition-duration: var(--transition-medium);
+  transition-property: opacity, transform;
+}
+
+.stagger-children.animate-visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.animate-visible > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.animate-visible > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.animate-visible > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.animate-visible > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-children.animate-visible > *:nth-child(6) { transition-delay: 0.6s; }
+
+.stagger-children.animate-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Crystal shimmer effect */
+@keyframes shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.crystal-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.crystal-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.2) 50%, 
+    rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
+
+/* Service card hover effects */
+.service-card {
+  transition: transform var(--transition-medium) var(--ease-bounce),
+              box-shadow var(--transition-medium) var(--ease-default);
+}
+
+/* Page transition animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Floating crystal animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Button interaction animations */
+.cta-button {
+  transition: transform var(--transition-fast) var(--ease-bounce),
+              box-shadow var(--transition-fast) var(--ease-default),
+              background-position var(--transition-medium) var(--ease-default);
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+
+.cta-button:hover {
+  background-position: 100% 0;
+}
+
+/* Form field animations */
+.form-group input, 
+.form-group textarea {
+  transition: border-color var(--transition-fast) ease,
+              box-shadow var(--transition-fast) ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 3px rgba(64, 224, 208, 0.2);
+  outline: none;
+}
+
+/* Navigation active state */
+.nav-links a.active:after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: var(--primary-light);
+}
+
+/* Improved button gradients */
+.cta-button {
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple), var(--accent-teal));
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+
+/* Logo shimmer - removed as requested */
+/* Animation timing variables */
+:root {
+  --transition-fast: 0.2s;
+  --transition-medium: 0.5s;
+  --transition-slow: 0.8s;
+  --ease-default: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-bounce: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Base animation classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--transition-medium) var(--ease-default),
+              transform var(--transition-medium) var(--ease-default);
+}
+
+.animate-on-scroll.animate-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animations for children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition-duration: var(--transition-medium);
+  transition-property: opacity, transform;
+}
+
+.stagger-children.animate-visible > *:nth-child(1) { transition-delay: 0.1s; }
+.stagger-children.animate-visible > *:nth-child(2) { transition-delay: 0.2s; }
+.stagger-children.animate-visible > *:nth-child(3) { transition-delay: 0.3s; }
+.stagger-children.animate-visible > *:nth-child(4) { transition-delay: 0.4s; }
+.stagger-children.animate-visible > *:nth-child(5) { transition-delay: 0.5s; }
+.stagger-children.animate-visible > *:nth-child(6) { transition-delay: 0.6s; }
+
+.stagger-children.animate-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Crystal shimmer effect */
+@keyframes shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.crystal-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.crystal-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.2) 50%, 
+    rgba(255,255,255,0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
+
+/* Service card hover effects */
+.service-card {
+  transition: transform var(--transition-medium) var(--ease-bounce),
+              box-shadow var(--transition-medium) var(--ease-default);
+}
+
+/* Page transition animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Floating crystal animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Button interaction animations */
+.cta-button {
+  transition: transform var(--transition-fast) var(--ease-bounce),
+              box-shadow var(--transition-fast) var(--ease-default),
+              background-position var(--transition-medium) var(--ease-default);
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+
+.cta-button:hover {
+  background-position: 100% 0;
+}
+
+/* Form field animations */
+.form-group input, 
+.form-group textarea {
+  transition: border-color var(--transition-fast) ease,
+              box-shadow var(--transition-fast) ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 3px rgba(64, 224, 208, 0.2);
+  outline: none;
+}
+
+/* Navigation active state */
+.nav-links a.active:after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: var(--primary-light);
+}
+
+/* Improved button gradients */
+.cta-button {
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple), var(--accent-teal));
+  background-size: 200% 100%;
+  background-position: 0 0;
+}
+
+
+/* Fade-slide animation variations */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity var(--transition-medium) var(--ease-default),
+              transform var(--transition-medium) var(--ease-default);
+}
+
+.fade-in-right.animate-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity var(--transition-medium) var(--ease-default),
+              transform var(--transition-medium) var(--ease-default);
+}
+
+.fade-in-left.animate-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Service icon pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.service-icon.pulse {
+  animation: pulse 0.6s ease;
+}
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

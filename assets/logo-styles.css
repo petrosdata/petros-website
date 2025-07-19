@@ -1,0 +1,41 @@
+/* Logo Styles for Petros Data */
+
+/* Adjust navigation logo size */
+.logo img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Thanks page specific logo adjustments */
+.thanks-page .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.thanks-page .logo img {
+  height: 70px;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+.thanks-page .logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, var(--accent-teal), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.float {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
